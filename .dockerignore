@@ -1,0 +1,11 @@
+.git
+.gitignore
+.DS_Store
+*.pem
+*.key
+*.crt
+*.env
+node_modules
+dist
+build
+assets/*.docx
