@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Survey — SWE645</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- W3.CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css"/>
+
+  <style>
+    .maxw { max-width: 900px; }
+    .error { color: #b71c1c; }
+    .hint { font-size: 12px; color: #555; }
+    .section-title { margin-top: 16px; }
+  </style>
+</head>
+<body class="w3-light-grey">
+
+  <header class="w3-container w3-center w3-padding-32 w3-white">
+    <h1 class="w3-text-indigo">Student Survey</h1>
+    <p class="w3-text-grey">SWE645 — Software Engineering for the WWW</p>
+  </header>
+
+  <main class="w3-container w3-padding-16">
+    <div class="w3-content maxw">
+      <form id="surveyForm"
+            action="index.html"
+            method="post"
+            class="w3-card w3-white w3-padding">
+
+        <!-- Contact / Required Fields -->
+        <h3 class="w3-text-indigo section-title">Contact Information</h3>
+
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label class="w3-text-black">First Name*</label>
+            <input class="w3-input w3-border" type="text" name="firstName" required />
+          </div>
+          <div class="w3-half">
+            <label class="w3-text-black">Last Name*</label>
+            <input class="w3-input w3-border" type="text" name="lastName" required />
+          </div>
+        </div>
+
+        <div class="w3-row-padding">
+          <div class="w3-col m12">
+            <label class="w3-text-black">Street Address*</label>
+            <input class="w3-input w3-border" type="text" name="address" required />
+          </div>
+        </div>
+
+        <div class="w3-row-padding">
+          <div class="w3-third">
+            <label class="w3-text-black">City*</label>
+            <input class="w3-input w3-border" type="text" name="city" required />
+          </div>
+          <div class="w3-third">
+            <label class="w3-text-black">State*</label>
+            <input class="w3-input w3-border" type="text" name="state" required />
+          </div>
+          <div class="w3-third">
+            <label class="w3-text-black">Zip*</label>
+            <input class="w3-input w3-border" type="text" name="zip" required
+                   pattern="^\d{5}(-\d{4})?$"
+                   title="Enter a 5-digit ZIP or ZIP+4 (e.g., 12345 or 12345-6789)" />
+          </div>
+        </div>
+
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label class="w3-text-black">Telephone*</label>
+            <input class="w3-input w3-border" type="tel" name="phone" required
+                   pattern="^\d{10}$"
+                   title="Enter a 10-digit number, digits only (e.g., 5715551234)" />
+            <div class="hint">Digits only (no spaces or dashes): 10 digits</div>
+          </div>
+          <div class="w3-half">
+            <label class="w3-text-black">Email*</label>
+            <input class="w3-input w3-border" type="email" name="email" required />
+          </div>
+        </div>
+
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <label class="w3-text-black">Date of Survey*</label>
+            <input class="w3-input w3-border" type="date" name="surveyDate" required />
+          </div>
+        </div>
+
+        <!-- Checkboxes -->
+        <h3 class="w3-text-indigo section-title">What did you like most about the campus?</h3>
+        <div class="w3-row-padding">
+          <div class="w3-col m12">
+            <label class="w3-margin-right"><input type="checkbox" name="likes" value="students"> Students</label>
+            <label class="w3-margin-right"><input type="checkbox" name="likes" value="location"> Location</label>
+            <label class="w3-margin-right"><input type="checkbox" name="likes" value="campus"> Campus</label>
+            <label class="w3-margin-right"><input type="checkbox" name="likes" value="atmosphere"> Atmosphere</label>
+            <label class="w3-margin-right"><input type="checkbox" name="likes" value="dorm rooms"> Dorm Rooms</label>
+            <label class="w3-margin-right"><input type="checkbox" name="likes" value="sports"> Sports</label>
+          </div>
+        </div>
+
+        <!-- Radio -->
+        <h3 class="w3-text-indigo section-title">How did you become interested in the university?</h3>
+        <div class="w3-row-padding">
+          <div class="w3-col m12">
+            <label class="w3-margin-right"><input type="radio" name="interestSource" value="friends" required> Friends</label>
+            <label class="w3-margin-right"><input type="radio" name="interestSource" value="television"> Television</label>
+            <label class="w3-margin-right"><input type="radio" name="interestSource" value="internet"> Internet</label>
+            <label class="w3-margin-right"><input type="radio" name="interestSource" value="other"> Other</label>
+          </div>
+        </div>
+
+        <!-- Dropdown -->
+        <h3 class="w3-text-indigo section-title">Likelihood of recommending this school</h3>
+        <div class="w3-row-padding">
+          <div class="w3-col m6 s12">
+            <select class="w3-select w3-border" name="recommendation" required>
+              <option value="" disabled selected>Choose an option</option>
+              <option>Very Likely</option>
+              <option>Likely</option>
+              <option>Unlikely</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Raffle -->
+        <h3 class="w3-text-indigo section-title">Raffle (enter at least 10 numbers, 1–100, comma-separated)</h3>
+        <div class="w3-row-padding">
+          <div class="w3-col m12">
+            <input id="raffleInput" class="w3-input w3-border" type="text" name="raffle" required
+                   placeholder="e.g., 5,12,37,44,89,100,3,18,29,76" />
+            <div id="raffleError" class="error w3-margin-top" style="display:none;"></div>
+            <div class="hint">Tip: Use only integers, separated by commas. Minimum 10 numbers. Each must be between 1 and 100.</div>
+          </div>
+        </div>
+
+        <!-- Comments -->
+        <h3 class="w3-text-indigo section-title">Additional Comments</h3>
+        <div class="w3-row-padding">
+          <div class="w3-col m12">
+            <textarea class="w3-input w3-border" name="comments" rows="4" placeholder="Your comments..."></textarea>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="w3-row-padding w3-margin-top">
+          <div class="w3-col m12">
+            <button type="submit" class="w3-button w3-indigo w3-round">Submit</button>
+            <button type="reset" class="w3-button w3-red w3-round w3-margin-left">Cancel</button>
+            <a href="index.html" class="w3-button w3-light-grey w3-round w3-margin-left">Back to Homepage</a>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <footer class="w3-center w3-padding-24 w3-small">
+    © 2025 Tarun Datta Gondi · SWE645 Assignment 1
+  </footer>
+
+  <script>
+    // Raffle validation: at least 10 comma-separated integers, each 1–100
+    document.getElementById('surveyForm').addEventListener('submit', function (e) {
+      const input = document.getElementById('raffleInput').value;
+      const errorBox = document.getElementById('raffleError');
+      errorBox.style.display = 'none';
+      errorBox.textContent = '';
+
+      // Split by commas, trim spaces
+      const parts = input.split(',').map(s => s.trim()).filter(s => s.length > 0);
+
+      if (parts.length < 10) {
+        e.preventDefault();
+        errorBox.textContent = 'Please enter at least 10 numbers separated by commas.';
+        errorBox.style.display = 'block';
+        return;
+      }
+
+      // Check all are integers between 1 and 100
+      for (let i = 0; i < parts.length; i++) {
+        if (!/^-?\d+$/.test(parts[i])) {
+          e.preventDefault();
+          errorBox.textContent = 'All raffle entries must be integers. Example: 5,12,37,...';
+          errorBox.style.display = 'block';
+          return;
+        }
+        const val = parseInt(parts[i], 10);
+        if (val < 1 || val > 100) {
+          e.preventDefault();
+          errorBox.textContent = 'Each number must be between 1 and 100.';
+          errorBox.style.display = 'block';
+          return;
+        }
+      }
+
+      // Passed raffle validation; form will submit to index.html (no backend storage required)
+    });
+  </script>
+</body>
+</html>

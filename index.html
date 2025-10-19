@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tarun Datta Gondi — SWE645 Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- W3.CSS + Icons -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-metro.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    /* Small tasteful tweaks */
+    .hero {
+      background: linear-gradient(135deg, #eef5ff 0%, #ffffff 100%);
+    }
+    .avatar {
+      width: 160px; height: 160px; object-fit: cover;
+    }
+    .pill {
+      display: inline-block; padding: 6px 12px; border-radius: 999px;
+      background: #eaf2ff; margin: 0 6px 6px 0; font-size: 14px;
+    }
+    .maxw { max-width: 1100px; }
+    a.button-cta { text-decoration: none; }
+  </style>
+</head>
+<body class="w3-light-grey">
+
+  <!-- Top Nav -->
+  <div class="w3-bar w3-white w3-border-bottom w3-card">
+    <a href="#" class="w3-bar-item w3-button w3-text-indigo w3-large w3-hover-none w3-hover-text-indigo">
+      <i class="fa-solid fa-laptop-code"></i>&nbsp; Tarun Datta Gondi
+    </a>
+    <a href="#about" class="w3-bar-item w3-button w3-right w3-hide-small">About</a>
+    <a href="#course" class="w3-bar-item w3-button w3-right w3-hide-small">SWE645 & Cloud</a>
+    <a href="#skills" class="w3-bar-item w3-button w3-right w3-hide-small">Skills</a>
+    <a href="survey.html" class="w3-bar-item w3-button w3-right w3-hide-small w3-indigo w3-text-white">Student Survey</a>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero w3-container w3-center w3-padding-64">
+    <div class="maxw w3-content">
+      <img src="mypic.png" alt="Profile Photo" class="w3-circle w3-card avatar" />
+      <h1 class="w3-xxlarge w3-margin-top">Hi, I’m <span class="w3-text-indigo"><b>Tarun Datta Gondi</b></span></h1>
+      <p class="w3-large">Graduate student passionate about <b>Cloud Computing</b>, <b>DevOps</b>, and modern web engineering.</p>
+      <div class="w3-margin-top">
+        <a href="survey.html" class="button-cta w3-button w3-indigo w3-round-large w3-padding-large">
+          <i class="fa-regular fa-clipboard"></i> &nbsp;Take the Student Survey
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="w3-container w3-white w3-padding-32">
+    <div class="maxw w3-content">
+      <h2 class="w3-text-indigo"><i class="fa-solid fa-user"></i> About Me</h2>
+      <p class="w3-large">
+        I’m a Master’s student in Computer Science with a strong interest in building reliable, scalable systems in the cloud.
+        I enjoy turning ideas into practical solutions using AWS services and modern DevOps practices such as automated builds,
+        testing, and continuous delivery.
+      </p>
+      <div class="w3-margin-top">
+        <span class="pill"><i class="fa-solid fa-cloud"></i> AWS</span>
+        <span class="pill"><i class="fa-solid fa-diagram-project"></i> DevOps</span>
+        <span class="pill"><i class="fa-solid fa-code"></i> Web Apps</span>
+        <span class="pill"><i class="fa-solid fa-cubes"></i> Containers</span>
+        <span class="pill"><i class="fa-solid fa-shield-halved"></i> Reliability</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SWE645 + Cloud/DevOps value -->
+  <section id="course" class="w3-container w3-padding-48">
+    <div class="maxw w3-content">
+      <div class="w3-row-padding">
+        <div class="w3-col l6 m12">
+          <div class="w3-card w3-white w3-padding">
+            <h2 class="w3-text-indigo"><i class="fa-solid fa-graduation-cap"></i> SWE645 — Why it matters</h2>
+            <p class="w3-large">
+              <b>SWE645: Software Engineering for the WWW</b> blends web engineering fundamentals with hands-on cloud deployment.
+              Through tasks like hosting static sites on <b>Amazon S3</b> and serving web pages from <b>EC2</b>, the course builds
+              practical experience in deploying and operating applications in the cloud.
+            </p>
+            <ul class="w3-ul w3-margin-top">
+              <li><i class="fa-solid fa-check w3-text-green"></i> Design & publish a personal homepage</li>
+              <li><i class="fa-solid fa-check w3-text-green"></i> Build a standards-compliant student survey page</li>
+              <li><i class="fa-solid fa-check w3-text-green"></i> Deploy to AWS S3 (static hosting) and EC2 (web server)</li>
+              <li><i class="fa-solid fa-check w3-text-green"></i> Learn the building blocks for CI/CD and cloud ops</li>
+            </ul>
+          </div>
+        </div>
+        <div class="w3-col l6 m12">
+          <div class="w3-card w3-white w3-padding">
+            <h3 class="w3-text-indigo"><i class="fa-solid fa-layer-group"></i> DevOps & Cloud Skills I’m Building</h3>
+            <p class="w3-large">This course directly supports my goal to become strong in:</p>
+            <ul class="w3-ul">
+              <li><i class="fa-solid fa-cloud-arrow-up w3-text-indigo"></i> Deploying static & dynamic sites on AWS</li>
+              <li><i class="fa-solid fa-gear w3-text-indigo"></i> Environment setup & automation basics</li>
+              <li><i class="fa-solid fa-network-wired w3-text-indigo"></i> Server configuration & security groups</li>
+              <li><i class="fa-solid fa-gauge-high w3-text-indigo"></i> Observability mindset (testing & verification)</li>
+              <li><i class="fa-brands fa-docker w3-text-indigo"></i> Container fundamentals (pathway to ECS/EKS)</li>
+            </ul>
+            <div class="w3-margin-top">
+              <a href="survey.html" class="button-cta w3-button w3-indigo w3-round">
+                Fill the Survey <i class="fa-regular fa-clipboard"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </section>
+
+  <!-- Skills quick grid -->
+  <section id="skills" class="w3-container w3-white w3-padding-32">
+    <div class="maxw w3-content">
+      <h2 class="w3-text-indigo"><i class="fa-solid fa-wand-magic-sparkles"></i> Tech Snapshot</h2>
+      <div class="w3-row-padding">
+        <div class="w3-col l3 m6 s12 w3-margin-bottom">
+          <div class="w3-card w3-padding w3-center">
+            <i class="fa-brands fa-aws w3-xxlarge w3-text-amber"></i>
+            <p class="w3-large w3-margin-small"><b>AWS Basics</b></p>
+            <p class="w3-small">S3 static hosting, EC2 web server</p>
+          </div>
+        </div>
+        <div class="w3-col l3 m6 s12 w3-margin-bottom">
+          <div class="w3-card w3-padding w3-center">
+            <i class="fa-solid fa-code w3-xxlarge"></i>
+            <p class="w3-large w3-margin-small"><b>Web Fundamentals</b></p>
+            <p class="w3-small">HTML5, CSS, forms, accessibility</p>
+          </div>
+        </div>
+        <div class="w3-col l3 m6 s12 w3-margin-bottom">
+          <div class="w3-card w3-padding w3-center">
+            <i class="fa-solid fa-screwdriver-wrench w3-xxlarge"></i>
+            <p class="w3-large w3-margin-small"><b>DevOps Mindset</b></p>
+            <p class="w3-small">Setup, verification, repeatability</p>
+          </div>
+        </div>
+        <div class="w3-col l3 m6 s12 w3-margin-bottom">
+          <div class="w3-card w3-padding w3-center">
+            <i class="fa-solid fa-clipboard-check w3-xxlarge"></i>
+            <p class="w3-large w3-margin-small"><b>Readiness</b></p>
+            <p class="w3-small">Clear docs & submission quality</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="w3-center w3-padding-32 w3-small">
+    © 2025 Tarun Datta Gondi · SWE645 Assignment 1 · <a href="survey.html">Student Survey</a>
+  </footer>
+
+</body>
+</html>
