@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: swe645-site
+  namespace: swe645-hw2
+  labels:
+    app: swe645-site
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: swe645-site
+  template:
+    metadata:
+      labels:
+        app: swe645-site
+    spec:
+      containers:
+        - name: web
+          image: tgondi/swe645-site:v1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /index.html
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /index.html
+              port: 80
+            initialDelaySeconds: 15
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "64Mi"
+            limits:
+              cpu: "250m"
+              memory: "256Mi"
